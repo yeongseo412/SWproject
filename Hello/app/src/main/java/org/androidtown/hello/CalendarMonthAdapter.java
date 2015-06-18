@@ -49,15 +49,12 @@ public class CalendarMonthAdapter extends BaseAdapter {
 
     public CalendarMonthAdapter(Context context, AttributeSet attrs) {
         super();
-
         mContext = context;
-
         init();
     }
 
     private void init() {
         items = new MonthItem[7 * 6];
-
         mCalendar = Calendar.getInstance();
         recalculate();
         resetDayNumbers();
@@ -260,15 +257,6 @@ public class CalendarMonthAdapter extends BaseAdapter {
     }
 
 
-
-
-
-
-    /**
-     * set selected row
-     *
-     * @param selectedRow
-     */
     public void setSelectedPosition(int selectedPosition) {
         this.selectedPosition = selectedPosition;
     }
