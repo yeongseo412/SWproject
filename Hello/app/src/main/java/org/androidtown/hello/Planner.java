@@ -1,23 +1,37 @@
 package org.androidtown.hello;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
-/**
- * Created by multimedia on 2015-06-17.
- */
-public class Planner extends ActionBarActivity {
+public class Planner extends Activity {
 
-    ListView listView;
+    private ListView m_Listview;
+    private CustomAdapter m_Adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_planner);
-        listView = (ListView) findViewById(R.id.listView);
 
-        ImageManager.instance.setImageNum(123123);
+        m_Adapter = new CustomAdapter();
+
+        m_Listview = (ListView) findViewById(R.id.listView);
+        m_Listview.setAdapter(m_Adapter);
+
+        m_Listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getApplicationContext(), m_Adapter.getItem(position) + "", Toast.LENGTH_SHORT).show();
+                m_Adapter.remove(position);
+            }
+        });
+        for (int i = 0; i < 10; i++)
+            m_Adapter.add(i + 1 + "번째 테스트");
+
     }
 
 

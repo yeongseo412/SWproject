@@ -6,7 +6,6 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.CalendarView;
 
-
 public class Cal extends ActionBarActivity {
 
     CalendarView calendarView;

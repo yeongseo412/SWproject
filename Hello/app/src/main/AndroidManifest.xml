@@ -19,10 +19,12 @@
              </intent-filter>
              </activity>
 
-             <activity android:name="Planner"></activity>
+
              <activity android:name="Kitchen"></activity>
              <activity android:name="Refrigerator"></activity>
              <activity android:name="Cal"></activity>
+             <activity android:name="Planner"></activity>
+
 
          </application>
      </manifest>
