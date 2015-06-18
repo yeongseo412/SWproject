@@ -1,15 +1,13 @@
 package org.androidtown.hello;
 
-<<<<<<< HEAD
+
 import android.content.res.Resources;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.ImageView;
-=======
 import android.support.v7.app.ActionBarActivity;
->>>>>>> origin/master
 
 
 public class Refrigerator extends ActionBarActivity {
@@ -25,7 +23,7 @@ public class Refrigerator extends ActionBarActivity {
         changeImage();
     }
 
-<<<<<<< HEAD
+
     private void changeImage() {
         if (ImageManager.instance.getImageNum() == 0) {
             imageView01 = (ImageView) findViewById(R.id.imageView01);
@@ -47,7 +45,6 @@ public class Refrigerator extends ActionBarActivity {
             ImageManager.instance.setImageNum(0);
         }
     }
-=======
->>>>>>> origin/master
+
 //imageView.setImage(ImageManager.instacne.getImgNum());
 }
